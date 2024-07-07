@@ -1,0 +1,6 @@
+*.c
+*.h
+*.cache
+compile_commands.json
+lsp.h
+Makefile

@@ -1,0 +1,21 @@
+BOARD=arduino:avr:uno
+PORT=/dev/ttyUSB0
+SKETCH=../example
+SOURCES= example.c
+
+compile: $(OBJECTS)
+	arduino-cli compile --fqbn $(BOARD) $(SKETCH) --verbose > build.log
+
+upload:
+	arduino-cli upload -p $(PORT) --fqbn $(BOARD) $(SKETCH)
+
+all: compile upload
+
+#only echo_sources rule needed
+echo_sources:
+	@echo $(SOURCES)
+
+
+clean:
+	@rm -f compile_commands.json lsp.h
+

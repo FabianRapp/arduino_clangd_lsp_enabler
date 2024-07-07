@@ -1,0 +1,35 @@
+SOURCES= expample.c
+
+
+echo_sources:
+	@echo $(SOURCES)
+
+
+#comment only:
+#with bigger project SOURCES looks something like this
+#SOURCES= \
+#	main.c \
+#	utils/fps.c \
+#	utils/fixed_point/fixed_point_float_conv.c \
+#	stuff.c \
+#	draw.c \
+#	vec3.c \
+#	utils1.c \
+#	triangle.c \
+#	obj_parser/obj_parser.c \
+#	matrix/init_matrix.c \
+#	matrix/matrix_math1.c \
+#	matrix/matrix_mult.c \
+#	fill_triangle.c \
+#	fill_triangle2.c \
+#	old.c \
+#	clipping_z.c \
+#	clipping_xy.c \
+#	key_handlers.c \
+#	menu/menu.c \
+#	menu/menu_open_close.c \
+#	menu/menu_public.c \
+#	menu/menu_hooks.c \
+#	init.c \
+#	utils/cleanup.c \
+#	arrays.c
