@@ -99,6 +99,8 @@ class   Data:
 #            header.write('#endif')
 
 def ultimate_arduino_header():
+    if os.path.exists("./lsp.h"):
+        return
     command = "echo '#ifdef LSP' > lsp.h && find ~ -wholename *arduino*'.h' -type f -exec basename {} \; | while read line; do echo \"#include <${line}>;\"; done >> lsp.h && echo '#endif' >> lsp.h"
     try:
         subprocess.run(command, shell=True, check=True)
